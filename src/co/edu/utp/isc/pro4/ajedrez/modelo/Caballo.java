@@ -36,8 +36,8 @@ public class Caballo extends Ficha {
         
 
         g.setPaint(new GradientPaint(x, y,
-                getColor() == Color.BLANCO ? java.awt.Color.PINK : java.awt.Color.RED,
-                x + 100, y + 50,
+                getColor() == Color.BLANCO ? java.awt.Color.BLACK : java.awt.Color.LIGHT_GRAY,
+                x + 150, y + 0,
                 java.awt.Color.WHITE));
 int juan=(int)x+20;        
 int jos=(int)x+20;        

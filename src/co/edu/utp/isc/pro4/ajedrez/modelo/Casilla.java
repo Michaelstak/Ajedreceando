@@ -59,7 +59,7 @@ public class Casilla extends Dibujable {
 
     @Override
     public void draw(Graphics2D g, float x, float y) {
-        g.setColor(color == Color.BLANCO ? java.awt.Color.WHITE : java.awt.Color.DARK_GRAY);
+        g.setColor(color == Color.BLANCO ? java.awt.Color.WHITE : java.awt.Color.GRAY);
         g.fill(new Rectangle2D.Float(x + 0, y + 0, 50, 50));
         if(ficha != null){
             ficha.draw(g, x, y);

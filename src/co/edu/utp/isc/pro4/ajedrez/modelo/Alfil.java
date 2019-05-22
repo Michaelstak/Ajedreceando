@@ -38,8 +38,8 @@ public class Alfil extends Ficha {
         
 
         g.setPaint(new GradientPaint(x, y,
-                getColor() == Color.BLANCO ? java.awt.Color.PINK : java.awt.Color.RED,
-                x + 100, y + 50,
+                getColor() == Color.BLANCO ? java.awt.Color.BLACK : java.awt.Color.LIGHT_GRAY,
+                x + 150, y + 0,
                 java.awt.Color.WHITE));
         g.fill(new Ellipse2D.Float(x+23, y+10, 4, 4));
         g.fill(new Ellipse2D.Float(x+21, y+15, 8, 8));

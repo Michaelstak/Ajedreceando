@@ -120,18 +120,18 @@ public class Ajedrez {
         asociarFichaTablero(tablero.getCasilla("G1"), new Caballo(Color.BLANCO));
         asociarFichaTablero(tablero.getCasilla("H1"), new Torre(Color.BLANCO));
 
-        asociarFichaTablero(tablero.getCasilla("A8"), new Torre(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("B8"), new Caballo(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("C8"), new Alfil(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("D8"), new Reina(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("E8"), new Rey(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("F8"), new Alfil(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("G8"), new Caballo(Color.NEGRO));
-        asociarFichaTablero(tablero.getCasilla("H8"), new Torre(Color.NEGRO));
+        asociarFichaTablero(tablero.getCasilla("A8"), new Torre(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("B8"), new Caballo(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("C8"), new Alfil(Color. GRIS));
+        asociarFichaTablero(tablero.getCasilla("D8"), new Reina(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("E8"), new Rey(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("F8"), new Alfil(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("G8"), new Caballo(Color.GRIS));
+        asociarFichaTablero(tablero.getCasilla("H8"), new Torre(Color.GRIS));
 
         for (int i = 0; i < 8; i++) {
             asociarFichaTablero(tablero.getCasilla(1, i), new Peon(Color.BLANCO));
-            asociarFichaTablero(tablero.getCasilla(6, i), new Peon(Color.NEGRO));
+            asociarFichaTablero(tablero.getCasilla(6, i), new Peon(Color.GRIS));
         }
 
     }

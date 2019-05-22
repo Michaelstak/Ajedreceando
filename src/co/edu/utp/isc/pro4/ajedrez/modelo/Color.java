@@ -10,5 +10,5 @@ package co.edu.utp.isc.pro4.ajedrez.modelo;
  * @author utp
  */
 public enum Color {
-    BLANCO, NEGRO
+    BLANCO, GRIS
 }

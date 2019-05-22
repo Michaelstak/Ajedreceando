@@ -37,8 +37,8 @@ public class Peon extends Ficha {
         
 
         g.setPaint(new GradientPaint(x, y,
-                getColor() == Color.BLANCO ? java.awt.Color.PINK : java.awt.Color.RED,
-                x + 100, y + 50,
+                getColor() == Color.BLANCO ? java.awt.Color.BLACK : java.awt.Color.LIGHT_GRAY,
+                x + 150, y + 0,
                 java.awt.Color.WHITE));
         g.fill(new Ellipse2D.Float(x + 20, y + 10, 10, 10));
         g.fill(new Rectangle2D.Float(x + 10, y + 35, 30, 5));

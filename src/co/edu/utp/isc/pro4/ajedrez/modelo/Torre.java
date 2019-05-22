@@ -36,8 +36,8 @@ public class Torre extends Ficha {
         
 
         g.setPaint(new GradientPaint(x, y,
-                getColor() == Color.BLANCO ? java.awt.Color.PINK : java.awt.Color.RED,
-                x + 100, y + 50,
+                getColor() == Color.BLANCO ? java.awt.Color.BLACK : java.awt.Color.LIGHT_GRAY,
+                x + 150, y + 0,
                 java.awt.Color.WHITE));
         g.fill(polyline);
         g.fill(new Rectangle.Float(x+10, y+10, 8, 5)) ;
@@ -45,13 +45,11 @@ public class Torre extends Ficha {
         g.fill(new Rectangle.Float(x+32, y+10, 8, 5)) ;
         
         g.fill(new Rectangle.Float(x+10, y+15, 30, 5)) ;
-        g.fill(new Rectangle.Float(x+13, y+27, 24, 2)) ;
-        g.fill(new Rectangle.Float(x+15, y+20, 20, 15)) ;
-        g.fill(new Rectangle.Float(x+10, y+35, 30, 5)) ;
+        g.fill(new Rectangle.Float(x+12, y+28, 25, 2)) ;
+        g.fill(new Rectangle.Float(x+13, y+20, 23, 20)) ;
+        g.fill(new Rectangle.Float(x+10, y+40, 30, 5)) ;
         
 
-        g.setColor(java.awt.Color.RED);
-        g.draw(polyline);
     }
 
 }

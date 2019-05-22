@@ -19,7 +19,7 @@ public class Tablero {
             casillas[i] = new Casilla[8];
             for (int j = 0; j < 8; j++) {
                 casillas[i][j] = new Casilla(
-                        (i + j) % 2 == 0 ? Color.NEGRO : Color.BLANCO,
+                        (i + j) % 2 == 0 ? Color.GRIS : Color.BLANCO,
                         i + 1,
                         (char) ('A' + j));
             }
