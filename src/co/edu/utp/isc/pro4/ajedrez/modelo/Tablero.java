@@ -30,12 +30,13 @@ public class Tablero {
     {
         Ficha ficha=this.casillas[columnaInicial][filaInicial].getFicha();
         
-        if(ficha.mover(filaFinal, columnaInicial, filaFinal, columnaFinal)){
+        System.out.println(String.valueOf(columnaInicial)+' '+String.valueOf(filaInicial)+' '+String.valueOf(columnaFinal)+' '+String.valueOf(filaFinal));
+        if(ficha.mover(filaInicial, columnaInicial, filaFinal, columnaFinal)){
             casillas[filaFinal][columnaFinal].setFicha(ficha);
             casillas[filaInicial][columnaInicial].setFicha(null);
             System.out.println("se hizo el cambio");
         }else{
-            System.out.println("el movimiento no ses valido");
+            System.out.println("el movimiento no es valido");
         }
     }
     

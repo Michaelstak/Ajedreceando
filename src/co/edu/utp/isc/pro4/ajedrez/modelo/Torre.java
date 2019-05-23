@@ -23,6 +23,7 @@ public class Torre extends Ficha {
     
     @Override
     public boolean mover(int fi, int ci, int ff, int cf) {
+        System.out.println(String.valueOf(fi)+' '+String.valueOf(ci)+' '+String.valueOf(ff)+' '+String.valueOf(cf));
         if(fi==ff || ci==cf ){
             return true;
         }else{
