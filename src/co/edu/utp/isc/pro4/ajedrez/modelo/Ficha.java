@@ -20,7 +20,7 @@ public abstract class Ficha extends Dibujable {
         this.color = color;
     }
 
-    public abstract void mover();
+    public abstract boolean mover(int fi, int ci, int ff, int cf);
 
     public abstract void comer();
 

@@ -20,10 +20,14 @@ public class Torre extends Ficha {
     public Torre(Color color) {
         super(color);
     }
-
+    
     @Override
-    public void mover() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean mover(int fi, int ci, int ff, int cf) {
+        if(fi==ff || ci==cf ){
+            return true;
+        }else{
+            return false;
+        }            
     }
 
     @Override

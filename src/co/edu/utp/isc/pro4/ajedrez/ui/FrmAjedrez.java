@@ -129,6 +129,9 @@ public class FrmAjedrez extends javax.swing.JFrame {
             }
         });
         pnlTablero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlTableroMouseClicked(evt);
+            }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pnlTableroMouseReleased(evt);
             }
@@ -238,6 +241,11 @@ public class FrmAjedrez extends javax.swing.JFrame {
         jPanel7.add(jLabel6, gridBagConstraints);
 
         txtInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInicioActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -286,6 +294,9 @@ public class FrmAjedrez extends javax.swing.JFrame {
         juego.jugar();
     }//GEN-LAST:event_btnJugarActionPerformed
 
+    
+    int fi,ci,ff,cf;
+    
     private void pnlTableroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlTableroMouseReleased
         // TODO add your handling code here:
         if (juego != null) {
@@ -293,12 +304,20 @@ public class FrmAjedrez extends javax.swing.JFrame {
             int col = 1 + evt.getX() / 50;
             int row = 1 + evt.getY() / 50;
 //            System.out.print(col + ", " + row + " = ");
+            
+    
             System.out.println((char) ('A' + col - 1) + Integer.toString(row));
             if (jugadaInicial) {
+                fi=row-1;
+                ci=col-1;
                 txtInicio.setText((char) ('A' + col - 1) + Integer.toString(row));
                 jugadaInicial = false;
             } else {
+                ff=row-1;
+                cf=col-1;
                 txtFin.setText((char) ('A' + col - 1) + Integer.toString(row));
+                System.out.println(String.valueOf(fi)+' '+String.valueOf(ci)+' '+String.valueOf(ff)+' '+String.valueOf(cf));
+                juego.getTablero().movimiento(ci, fi, cf, ff);
                 jugadaInicial = true;
             }
         }
@@ -312,6 +331,13 @@ public class FrmAjedrez extends javax.swing.JFrame {
             pnlTablero.setToolTipText((char) ('A' + col - 1) + Integer.toString(row));
         }
     }//GEN-LAST:event_pnlTableroMouseMoved
+
+    private void pnlTableroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlTableroMouseClicked
+    }//GEN-LAST:event_pnlTableroMouseClicked
+
+    private void txtInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInicioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -26,6 +26,19 @@ public class Tablero {
         }
     }
 
+    public void movimiento(int columnaInicial, int filaInicial, int columnaFinal,int filaFinal)
+    {
+        Ficha ficha=this.casillas[columnaInicial][filaInicial].getFicha();
+        
+        if(ficha.mover(filaFinal, columnaInicial, filaFinal, columnaFinal)){
+            casillas[filaFinal][columnaFinal].setFicha(ficha);
+            casillas[filaInicial][columnaInicial].setFicha(null);
+            System.out.println("se hizo el cambio");
+        }else{
+            System.out.println("el movimiento no ses valido");
+        }
+    }
+    
     public Casilla getCasilla(int fila, int columna) {
         return casillas[fila][columna];
     }

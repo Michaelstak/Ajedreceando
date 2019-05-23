@@ -25,6 +25,10 @@ import co.edu.utp.isc.pro4.ajedrez.ui.PnlTablero;
  */
 public class Ajedrez {
 
+    /**
+     * @return the tablero
+     */
+
     /*Temporal*/
     private PnlTablero pnlTablero;
 
@@ -43,6 +47,10 @@ public class Ajedrez {
         terminado = false;
     }
 
+    public Tablero getTablero() {
+        return tablero;
+    }
+    
     public Ajedrez(Jugador jugador1, Jugador jugador2) {
         this();
         this.jugadores[0] = jugador1;
@@ -51,7 +59,7 @@ public class Ajedrez {
 
     public void setPnlTablero(PnlTablero pnlTablero) {
         this.pnlTablero = pnlTablero;
-        pnlTablero.setTablero(tablero);
+        pnlTablero.setTablero(getTablero());
     }
 
     public void jugar() {
@@ -111,27 +119,27 @@ public class Ajedrez {
     }
 
     private void ubicarFichasTablero() {
-        asociarFichaTablero(tablero.getCasilla("A1"), new Torre(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("B1"), new Caballo(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("C1"), new Alfil(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("D1"), new Reina(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("E1"), new Rey(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("F1"), new Alfil(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("G1"), new Caballo(Color.BLANCO));
-        asociarFichaTablero(tablero.getCasilla("H1"), new Torre(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("A1"), new Torre(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("B1"), new Caballo(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("C1"), new Alfil(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("D1"), new Reina(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("E1"), new Rey(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("F1"), new Alfil(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("G1"), new Caballo(Color.BLANCO));
+        asociarFichaTablero(getTablero().getCasilla("H1"), new Torre(Color.BLANCO));
 
-        asociarFichaTablero(tablero.getCasilla("A8"), new Torre(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("B8"), new Caballo(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("C8"), new Alfil(Color. GRIS));
-        asociarFichaTablero(tablero.getCasilla("D8"), new Reina(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("E8"), new Rey(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("F8"), new Alfil(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("G8"), new Caballo(Color.GRIS));
-        asociarFichaTablero(tablero.getCasilla("H8"), new Torre(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("A8"), new Torre(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("B8"), new Caballo(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("C8"), new Alfil(Color. GRIS));
+        asociarFichaTablero(getTablero().getCasilla("D8"), new Reina(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("E8"), new Rey(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("F8"), new Alfil(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("G8"), new Caballo(Color.GRIS));
+        asociarFichaTablero(getTablero().getCasilla("H8"), new Torre(Color.GRIS));
 
         for (int i = 0; i < 8; i++) {
-            asociarFichaTablero(tablero.getCasilla(1, i), new Peon(Color.BLANCO));
-            asociarFichaTablero(tablero.getCasilla(6, i), new Peon(Color.GRIS));
+            asociarFichaTablero(getTablero().getCasilla(1, i), new Peon(Color.BLANCO));
+            asociarFichaTablero(getTablero().getCasilla(6, i), new Peon(Color.GRIS));
         }
 
     }
