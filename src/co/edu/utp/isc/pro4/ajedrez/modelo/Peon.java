@@ -23,10 +23,19 @@ public class Peon extends Ficha {
 
     @Override
    public boolean mover(int fi, int ci, int ff, int cf) {
+    if(fi==2||fi==7){
+        if (ci==cf && fi==ff+2){
+            return true;}
+        if (ci==cf && fi==ff+1){
+            return true;}
+    }
+    if (ci==cf && fi==ff+1){
+        return true;
+    }
+    else{
         return false;
-        //TODO: Mover como peon
+    }
    }
-
     @Override
     public void comer() {
         //TODO: Comer como peon
