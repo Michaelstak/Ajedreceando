@@ -21,9 +21,29 @@ public class Caballo extends Ficha {
     }
 
     @Override
-    public void mover() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean mover(int fi, int ci, int ff, int cf) {
+        System.out.println(String.valueOf(fi)+' '+String.valueOf(ci)+' '+String.valueOf(ff)+' '+String.valueOf(cf));
+        if(cf==ci+1 && ff==fi-2){
+            return true;}
+        if(cf==ci+1 && ff==fi+2){
+            return true;}
+        if(cf==ci-1 && ff==fi+2){
+            return true;}
+        if(cf==ci-1 && ff==fi-2){
+            return true;}
+        if(cf==ci+2 && ff==fi-1){
+            return true;}
+        if(cf==ci+2 && ff==fi+1){
+            return true;}
+        if(cf==ci-2 && ff==fi+1){
+            return true;}
+        if(cf==ci-2 && ff==fi-1){
+            return true;  
+        }else{
+            return false;
+        }            
     }
+    
 
     @Override
     public void comer() {

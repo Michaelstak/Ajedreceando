@@ -9,6 +9,7 @@ import java.awt.GradientPaint;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.GeneralPath;
+import static java.lang.Math.abs;
 
 /**
  *
@@ -19,10 +20,16 @@ public class Rey extends Ficha {
     public Rey(Color color) {
         super(color);
     }
-
     @Override
-    public void mover() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean mover(int fi, int ci, int ff, int cf) {
+        System.out.println(String.valueOf(fi)+' '+String.valueOf(ci)+' '+String.valueOf(ff)+' '+String.valueOf(cf));
+        if((abs(fi-ff)/(abs(fi-ff))==(abs(ci-cf))/(abs(ci-cf)))){
+            return true;}
+        if(fi==ff || ci==cf ){
+            return true;}
+        else{
+            return false;
+        }
     }
 
     @Override

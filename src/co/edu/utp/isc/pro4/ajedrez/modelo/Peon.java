@@ -22,9 +22,10 @@ public class Peon extends Ficha {
     }
 
     @Override
-    public void mover() {
+   public boolean mover(int fi, int ci, int ff, int cf) {
+        return false;
         //TODO: Mover como peon
-    }
+   }
 
     @Override
     public void comer() {
